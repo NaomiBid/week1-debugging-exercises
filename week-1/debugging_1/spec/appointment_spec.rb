@@ -1,4 +1,5 @@
 require 'appointment'
+require 'pry'
 
 describe Appointment do
   subject(:appointment) { described_class.new(time, "Test appointment", "50 Commercial Street London") }
@@ -6,6 +7,8 @@ describe Appointment do
 
   describe '#title' do
     it 'has a title' do
+  #    binding.pry
+
       expect(appointment.title).to eq "Test appointment"
     end
   end

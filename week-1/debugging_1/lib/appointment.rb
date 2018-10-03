@@ -3,14 +3,17 @@ require 'geocoder'
 class Appointment
   attr_reader :time, :title
 
-  def initialize(time, tit1e, location, geocoder = Geocoder)
+  def initialize(time, title, location, geocoder = Geocoder)
     @time = time
+  #  binding.pry
     @title = title
     @location = location
+  #  binding.pry
     @geocoder = geocoder
   end
 
   def pretty_location
+    binding.pry 
     geo_location.formatted_address
   end
 
